@@ -1,0 +1,52 @@
+# Private learning materials and all generated resource packages.
+/content/
+/analysis/
+/references/
+*.razpack
+*.dab
+*.pdf
+*.mp3
+
+# Dependencies, build products, test media, and local tooling.
+node_modules/
+/dist/
+/artifacts/
+/test-results/
+/playwright-report/
+/public/legal/
+/.local/
+/.sessions/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.env
+.env.*
+
+# Native generated files and local SDK paths.
+android/.gradle/
+android/local.properties
+android/**/build/
+android/capacitor-cordova-android-plugins/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/app/src/main/res/xml/config.xml
+
+# Signing credentials must stay outside the repository.
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.apk
+*.aab
+signing.json
+keystore.properties

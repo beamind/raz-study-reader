@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RAZ 小小精读</string>
+    <string name="title_activity_main">RAZ 小小精读</string>
+    <string name="package_name">com.beamind.smartraz</string>
+    <string name="custom_url_scheme">com.beamind.smartraz</string>
+</resources>

@@ -1,0 +1,3 @@
+# Optional build-time tooling. Models and inference are never included in the APK.
+rapidocr==3.9.2
+onnxruntime==1.29.0

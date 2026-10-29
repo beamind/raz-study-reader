@@ -1,0 +1,14 @@
+// Optional, scoped to a single build via --init-script. Official repositories remain as fallbacks.
+gradle.beforeProject { project ->
+    [project.buildscript.repositories, project.repositories].each { repositories ->
+        def mirror = repositories.maven {
+            name = 'HuaweiPublicMirror'
+            url = uri('https://repo.huaweicloud.com/repository/maven/')
+        }
+        // Root allprojects blocks may already have added Google/Maven Central
+        // before a subproject's beforeProject callback. Explicitly put the
+        // opt-in mirror first rather than appending it after the slow source.
+        repositories.remove(mirror)
+        repositories.addFirst(mirror)
+    }
+}

@@ -1,0 +1,2 @@
+# Synthetic images and Python content-tool regression tests.
+pillow==12.3.0

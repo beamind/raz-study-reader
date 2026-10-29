@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-29",
+  "version": "1.0.0",
+  "versionCode": 2,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "pythonTestsPassed": 145,
+  "browserTestsPassed": 24,
+  "androidReleaseBuildPassed": true,
+  "androidLintVitalPassed": true,
+  "androidRuntimeTested": false,
+  "artifact": {
+    "path": "artifacts/smart-raz-reader-1.0.0-release.apk",
+    "bytes": 3150961,
+    "sha256": "50a284029bed57bc6ed3d8200c99d6d5c284278867a0a008a13a07c8a24427c2"
+  },
+  "signing": {
+    "certificateSha256": "45c150f6e7b7eed9d7cf07559d7e62118470a4eaf21c1629bf06e59850c94b44",
+    "apkSignatureVerified": true,
+    "zipAlignmentVerified": true
+  },
+  "checks": {
+    "emptyBookCatalog": true,
+    "noBookMediaOrPrivateSigningFilesInApk": true,
+    "appLicenseMatchesSource": true,
+    "debuggable": false,
+    "webViewDebugging": false
+  },
+  "gitCommitCreated": false,
+  "remotePushPerformed": false
+}

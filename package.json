@@ -1,0 +1,52 @@
+{
+  "name": "raz-study-reader",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "content:build": "python tools/build_reader_content.py",
+    "content:stage": "python tools/stage_reader_content.py",
+    "packs:build": "python tools/build_resource_packs.py",
+    "pages:build": "python tools/build_original_pages.py",
+    "audio:build": "python tools/build_page_audio.py",
+    "predev": "npm run licenses:build && python tools/prepare_reader_dev.py",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build && python tools/stage_reader_shell.py",
+    "build:bundled": "npm run content:build && tsc --noEmit && vite build --mode bundled && npm run content:stage",
+    "preview": "vite preview --host 127.0.0.1",
+    "pretest": "python tools/create_resource_pack_fixtures.py",
+    "test": "npm run build && playwright test",
+    "test:python": "python -m unittest discover -s tests",
+    "android:sync": "npm run build && cap sync android",
+    "android:build": "pwsh -File tools/build_android.ps1",
+    "android:release": "pwsh -File tools/build_android.ps1 -Configuration Release",
+    "licenses:build": "python tools/build_third_party_notices.py",
+    "prebuild": "npm run licenses:build",
+    "prebuild:bundled": "npm run licenses:build"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.1",
+    "@capacitor/app": "8.1.1",
+    "@capacitor/core": "8.5.1",
+    "@capacitor/preferences": "8.0.1",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.1",
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.0.0"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}
